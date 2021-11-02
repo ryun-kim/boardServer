@@ -21,5 +21,6 @@ public class InsBoardServlet extends HttpServlet {
         System.out.println("ctnt :" + vo.getCtnt());
         System.out.println("writer :" + vo.getWriter());
 
+        BoardDAO.insBoard(vo);
     }
 }

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 
 public class BoardDAO {
+    /*
     public static void main(String[] args){
         BoardVO param = new BoardVO();
         param.setTitle("www");
@@ -14,15 +15,15 @@ public class BoardDAO {
         System.out.printf("타이틀 : "+ param.getTitle());
         System.out.printf("ctnt : "+ param.getCtnt());
         System.out.printf("작성 : "+ param.getWriter());
-
     }
+     */
     public static int insBoard(BoardVO param) {
         Connection con = null;
         PreparedStatement ps = null;
-        String sql = "INSERT INTO t_board " +
-                "(title, ctnt, writer) "+
-                "VAlUES " +
-                "(?,?,?)";
+        String sql = " INSERT INTO t_board " +
+                " (title, ctnt, writer) "+
+                " VAlUES " +
+                " (?,?,?) ";
         try{
             con = DbUtils.getCon();
             ps = con.prepareStatement(sql);
